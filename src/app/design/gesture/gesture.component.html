@@ -1,0 +1,29 @@
+<div class="gesture-container" *ngIf="gesture">
+  <!-- Fixed Toolbar -->
+  <mat-toolbar color="primary" class="fixed-toolbar">
+    <button mat-icon-button (click)="goBack()">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <span>Gesture Screen</span>
+  </mat-toolbar>
+  <div class="card_toatal mt-4">
+    <!-- Swiper Container -->
+    <div class="container ">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <!-- Loop through visible profiles and display each as a card -->
+          <div class="swiper-slide card" *ngFor="let profile of visibleProfiles">
+            <img [src]="profile.photo" class="card-img-top" alt="{{ profile.name }}">
+            <div class="card-body">
+              <h5 class="card-title">Name:{{ profile.name }}</h5>
+              <p class="card-text">{{ profile.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="homepage">
+  <app-home></app-home>
+</div>

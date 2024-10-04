@@ -1,0 +1,51 @@
+<div class="home-container" *ngIf="homepages">
+    <mat-toolbar color="primary">
+      <span>Home</span>
+      <span class="spacer"></span>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="goToGestureScreen()">Gesture Screen</button>
+      </mat-menu>
+    </mat-toolbar>
+    <div class="row main_div ">
+      <!-- Previous Button -->
+      <div class="col-md-1 text-center arrow_data">
+        <button class="prev" [disabled]="disablePrevious" (click)="getPreviousData()">❮</button>
+      </div>
+    
+      <!-- Profile Cards -->
+      <div class="col-md-11 d-flex justify-content-start">
+        <div class="row">
+          <div class="profile-card m-3 col p-4" *ngFor="let profile of storedProfiles.slice(startIndex, startIndex + 4); let i = index">
+            <div (click)="goToProfileDetails(profile.id)">
+              <img [src]="profile.photo" alt="Profile Photo" class="profile-photo" />
+              <p>{{ profile.description }}</p>
+            </div>
+            <span class="action-buttons">
+              <button mat-button color="primary" (click)="removeProfile(i, 'Yes')" class="btn btn-primary">Yes</button>
+              <button mat-button color="warn" (click)="removeProfile(i, 'No')">No</button>
+            </span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Next Button -->
+      <div class="col-md-1 text-center arrow_data">
+        <button class="next" [disabled]="disableNext" (click)="getNextData()">❯</button>
+      </div>
+    </div>
+    
+  
+    
+  </div>
+  <!-- <img src="assets/madonnaa.png" alt="">   -->
+   <div *ngIf="gentures">
+   <app-gesture></app-gesture>
+   </div>
+   <div *ngIf="profile">
+    <app-profile-details [profileDetailsimage]="selectedProfileimage"></app-profile-details>
+   </div>
+
+   

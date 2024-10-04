@@ -1,0 +1,104 @@
+// .profile-details-container {
+//     padding: 20px;
+//   }
+  
+//   .carousel-container {
+//     width: 100%;
+//     max-width: 400px;
+//     margin: 0 auto;
+//   }
+  
+//   .carousel-photo {
+//     width: 100%;
+//     height: auto;
+//     border-radius: 10px;
+//   }
+  
+//   .profile-description {
+//     margin-top: 20px;
+//     text-align: center;
+//   }
+  
+//   //////////////////////////////////////////////////////
+//   /// 
+//   /// 
+//   /// 
+//   * {
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+//   }
+  
+//   body {
+//     font-family: sans-serif;
+//   }
+  
+//   main {
+//     padding: 20px;
+//   }
+  
+//   h2 {
+//     margin-bottom: 20px;
+//   }
+  
+//   .scroll-area {
+//     display: flex;
+//     align-items: center;
+//     justify-content: flex-start;
+//     gap: 20px;
+//   }
+  
+//   .scroll-thumb {
+//     font-size: 50px;
+//     cursor: pointer;
+//   }
+  
+//   .scroll-x {
+//     width: 100%;
+//     display: flex;
+//     gap: 20px;
+//     overflow-x: hidden;
+//     overflow-y: hidden;
+//     scroll-behavior: smooth;
+//     white-space: nowrap;
+//     padding: 10px;
+//   }
+  
+  .cards {
+    border: 2px solid black;
+    padding: 2% !important;
+    max-width: 500px !important;
+    margin-left: 31% !important;
+    margin-top: 3% !important;
+  }
+  
+
+//////////////////////03-10-2024
+/// 
+.carousel {
+  width: 100%;
+  height: auto;
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: Add some border radius */
+}
+
+
+.slide {
+  // animation: slideImage 4s ease-in-out infinite;
+}
+
+@keyframes slideImage {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

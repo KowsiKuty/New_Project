@@ -1,0 +1,48 @@
+<div class="profile-details-container" *ngIf="profile">
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <span>Profile Details</span>
+    </mat-toolbar>
+  <div class="cards">
+    <div class="carousel">
+      <img [src]="profileDetails.photo" alt="{{profileDetails.name}}" class="profile-image slide">
+    </div>
+    <div class="profile-info">
+      <h3>{{profileDetails.name}}</h3>
+      <p>{{profileDetails.description}}</p>
+    </div>
+  </div>
+    
+  </div>
+  <div *ngIf="homepage">
+    <app-home ></app-home>
+  </div>
+
+  <!-- <div class="profile-details-container" *ngIf="profile">
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <span>Profile Details</span>
+    </mat-toolbar>
+  
+    <swiper [navigation]="true" [pagination]="true" class="carousel">
+      <ng-container *ngFor="let photo of profileDetails.photo">
+        <ng-template swiperSlide>
+          <img [src]="photo" alt="{{profileDetails.name}}" class="profile-image">
+        </ng-template>
+      </ng-container>
+    </swiper>
+  
+    <div class="profile-info">
+      <h3>{{profileDetails.name}}</h3>
+      <p>{{profileDetails.description}}</p>
+    </div>
+  </div>
+  
+  <div *ngIf="homepage">
+    <app-home></app-home>
+  </div>
+   -->
